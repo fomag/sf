@@ -67,20 +67,34 @@
 <form action="step-3.html" method="POST" id="validation-example">
 
 <p><strong>Fields marked with an asterisk (<span class="text-danger">*</span>) are required.</strong></p>
+<style>
+   
+.dl-horizontal dd {
+    margin-left: 460px;
+}
 
+.dl-horizontal dt {
+    width: 400px;
+}
 
-<div _ngcontent-ng-c2786637855="" class="mrgn-tp-lg well well-secondary">
-<div _ngcontent-ng-c2786637855="" class="row nav">
-<div _ngcontent-ng-c2786637855="" class="col-sm-10 col-xs-7">
-<h2 _ngcontent-ng-c2786637855="" class="h3 mrgn-tp-0 mrgn-bttm-0">Individual's information</h2>
+.dl-horizontal dd, dt {
+    line-height: 0.5;
+}
+
+</style>
+
+<div class="mrgn-tp-lg well well-secondary">
+<div class="row nav">
+<div class="col-sm-10 col-xs-7">
+<h2 class="h3 mrgn-tp-0 mrgn-bttm-0">Individual's information</h2>
 </div>
-<div _ngcontent-ng-c2786637855="" class="col-sm-2 col-xs-5 text-right"><a _ngcontent-ng-c2786637855="" href="/ebci/uisp/rc193/review"><span _ngcontent-ng-c2786637855="" aria-hidden="true" class="glyphicon glyphicon-pencil" style="padding-right: 5px;"></span><span _ngcontent-ng-c2786637855="" aria-hidden="true"> Edit</span><span _ngcontent-ng-c2786637855="" class="wb-inv">Edit individual's information</span></a></div></div>
-<hr _ngcontent-ng-c2786637855="" class="solid-line brdr-bttm">
-<div _ngcontent-ng-c2786637855="" class="mrgn-lft-md mrgn-tp-lg">
-<dl _ngcontent-ng-c2786637855="" class="dl-horizontal brdr-0 dl-col-5 nopadding">
-<dt _ngcontent-ng-c2786637855="">First name</dt>
-<dd _ngcontent-ng-c2786637855="">Test</dd>
-<dt _ngcontent-ng-c2786637855="">Last name</dt>
+<div class="col-sm-2 col-xs-5 text-right"><a _ngcontent-ng-c2786637855="" href="/ebci/uisp/rc193/review"><span _ngcontent-ng-c2786637855="" aria-hidden="true" class="glyphicon glyphicon-pencil" style="padding-right: 5px;"></span><span _ngcontent-ng-c2786637855="" aria-hidden="true"> Edit</span><span _ngcontent-ng-c2786637855="" class="wb-inv">Edit individual's information</span></a></div></div>
+<hr class="solid-line brdr-bttm">
+<div class="mrgn-lft-md mrgn-tp-lg">
+<dl class="dl-horizontal brdr-0 dl-col-5 nopadding">
+<dt>First name</dt>
+<dd>Test</dd>
+<dt>Last name</dt>
 <dd _ngcontent-ng-c2786637855="">Testor</dd>
 <dt _ngcontent-ng-c2786637855="">Social Insurance Number (or ITN, TTN)</dt>
 <dd _ngcontent-ng-c2786637855="">111111111</dd>
@@ -116,24 +130,24 @@
 </fieldset>
 
 <div class="mrgn-tp-lg">
-<a href="step-1.html" type="submit" name="fbsbmt40" id="fbsbmt40" value="Previous" class="btn btn-default btn-lg">Previous</a>
+<input type="button" name="fbsbmt40" id="fbsbmt40" value="Previous" class="btn btn-default btn-lg" onclick="history.back()">
 <input type="submit" name="fbsbm41" id="fbsbmt41" value="Next" class="btn btn-primary btn-lg">
 </div>
 
 </form></div>
 
 
-           <div id="def-preFooter"></div>
-           <!-- Write closure template -->
-           <script type="text/javascript">
-               var defPreFooter = document.getElementById("def-preFooter");
-               defPreFooter.outerHTML = wet.builder.preFooter({
-               dateModified: "2020-03-13",
-               showPostContent: true,
-               showFeedback: true,
-               showShare: true
-               });
-            </script>
+<div class="pagedetails mrgn-bttm-lg">
+<dl id="wb-dtmd">
+<dt translate="">Screen ID: </dt>
+<dd >UISP-RC193-ENTRY</dd>
+<dt  translate="">Version: </dt>
+<dd >202310.003</dd>
+</dl>
+</div>
+
+<div class="clearfix"></div>
+
          </main>
          <div id="def-footer">
          </div>

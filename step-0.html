@@ -94,7 +94,7 @@
 </fieldset>
 
 <fieldset class="chkbxrdio-grp">
-<legend class="required"><span class="field-name">Are you submitting on behalf of yourself or for your business?</span></legend>
+<legend class="required"><span class="field-name">Are you submitting on behalf of yourself or for your business?</span>&nbsp;<a role="button" class="help-glyph" aria-controls="f49d4ed4-e236-51cd-7806-3063a80db789_inlineHelp" aria-expanded="false" href="/ebci/uisp/rc193/complaint"><span class="glyphicon glyphicon-question-sign"><span class="wb-inv"></span><!----><!----></span></a></span></legend>
 
 <div class="radio">
    <label for="radio1"><input id="radio1" type="radio" name="optradio" data-rule-required="true">I am submitting on behalf of myself</label>
@@ -141,6 +141,16 @@ TEST SECTION
 </div>
 
 
+<div class="form-group mrgn-tp-lg">
+<label for="sin" class="required"><span class="field-name">Social Insurance Number (or ITN, TTN)</span></label>
+<input type="text" required="required" class="form-control" id="sin" name="sin" size="9" maxlength="9" data-rule-digits="true" data-rule-minlength="9">
+</div>
+
+<div class="form-group mrgn-tp-lg" style="display:none">
+<label for="othacc" class="required"><span class="field-name">Other account number </span></label>
+<input type="text" required="required" class="form-control" id="othacc" name="othacc" size="15" maxlength="15" data-rule-maxlength="15">
+</div>
+
 </div>
 
 <div class="form-group mrgn-tp-lg">
@@ -157,13 +167,13 @@ TEST SECTION
 </div>
 
 <div class="form-group mrgn-tp-lg">
-<label for="fbwphnxt" class="required"><span class="field-name">Mailing address </span></label>
-<input class="form-control" type="text" id="fbwphnxt" name="fbwphnxt" size="45" maxlength="100">
+<label for="address" class="required"><span class="field-name">Mailing address </span></label>
+<input class="form-control" type="text" id="address" name="address" size="45" maxlength="100">
 </div>
 
 <div class="form-group mrgn-tp-lg">
-<label for="fbwphnxt" class="required"><span class="field-name">City</span></label>
-<input class="form-control" type="text" id="fbwphnxt" name="fbwphnxt" size="45" maxlength="50">
+<label for="city" class="required"><span class="field-name">City</span></label>
+<input class="form-control" type="text" id="city" name="city" size="45" maxlength="50" data-rule-letterswithbasicpunc="true">
 </div>
 
 <div class="form-group">
@@ -186,30 +196,30 @@ TEST SECTION
 </div>
 
 
-      <div class="form-group">
-         <label for="pcodeca1" class="required"><span class="field-name">Postal code</span> <strong class="required">(required)</strong></label>
-         <input class="form-control" id="pcodeca1" name="pcodeca1" type="text" autocomplete="postal-code" size="7" maxlength="7" required="required" data-rule-postalCodeCA="true" />
-      </div>
+<div class="form-group">
+   <label for="pcodeca1" class="required"><span class="field-name">Postal code</span></label>
+   <input class="form-control" id="pcodeca1" name="pcodeca1" type="text" autocomplete="postal-code" size="7" maxlength="7" required="required" data-rule-postalCodeCA="true" />
+</div>
 
 <div class="form-group mrgn-tp-lg">
 <label for="fbhphn1" class="required"><span class="field-name">Telephone number</span> (brackets, spaces or dashes not accepted)</label>
-<input type="tel" required="required" class="form-control" id="fbhphn1" name="fbhphn1" size="12" maxlength="12" data-rule-phoneUS="true">
+<input class="form-control" id="fbhphn1" name="fbhphn1" type="tel" autocomplete="tel" size="10" maxlength="10" required="required" data-rule-phoneUS="true" />
 </div>
 
 
 <div class="form-group">
    <label for="tel1" class="required"><span class="field-name">Telephone number</span> </label>
    <div class="form-inline">
-     <span class="h3">(</span> <input id="tel1" name="tel1" type="text" required="required" data-rule-digits="true" size="3" maxlength="3" data-rule-minlength="3"> <span class="h3"> )</span>
-      <input id="tel2" name="tel2" type="text" required="required" data-rule-digits="true" size="3" maxlength="3" data-rule-minlength="3"> <span class="h3"> - </span> 
-      <input id="tel3" name="tel3" type="text" required="required" data-rule-digits="true" size="4" maxlength="4" data-rule-minlength="4">
+     <span class="h3">(</span> <input id="tel1" name="tel1" type="text" required="required" data-rule-digits="true" size="3" maxlength="3" data-rule-minlength="3" data-rule-require_from_group='[3,".group"]' class="group"> <span class="h3"> )</span>
+     <input id="tel2" name="tel2" type="text" required="required" data-rule-digits="true" size="3" maxlength="3" data-rule-minlength="3" data-rule-require_from_group='[3,".group"]' class="group"> <span class="h3"> - </span> 
+     <input id="tel3" name="tel3" type="text" required="required" data-rule-digits="true" size="4" maxlength="4" data-rule-minlength="4" data-rule-require_from_group='[3,".group"]' class="group">
    </div>
 </div>
 
 
 <div class="form-group mrgn-tp-lg">
 <label for="fbhphn5"><span class="field-name">Alternate phone number</span> (brackets, spaces or dashes not accepted) </label>
-<input class="form-control" type="tel" id="fbhphn5" name="fbhphn5" size="12" maxlength="12" data-rule-phoneUS="true">
+<input class="form-control" type="tel" id="fbhphn5" name="fbhphn5" size="12" maxlength="12" data-rule-phoneUS="true" >
 </div>
 
 
@@ -225,17 +235,18 @@ TEST SECTION
 </form>
 </div>
 
-           <div id="def-preFooter"></div>
-           <!-- Write closure template -->
-           <script type="text/javascript">
-               var defPreFooter = document.getElementById("def-preFooter");
-               defPreFooter.outerHTML = wet.builder.preFooter({
-               dateModified: "2020-03-13",
-               showPostContent: true,
-               showFeedback: true,
-               showShare: true
-               });
-            </script>
+
+<div class="pagedetails mrgn-bttm-lg">
+<dl id="wb-dtmd">
+<dt translate="">Screen ID: </dt>
+<dd >UISP-RC193-ENTRY</dd>
+<dt  translate="">Version: </dt>
+<dd >202310.003</dd>
+</dl>
+</div>
+
+<div class="clearfix"></div>
+
          </main>
          <div id="def-footer">
          </div>
