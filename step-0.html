@@ -9,7 +9,7 @@
       <head>
          <meta charset="utf-8">
          <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-         <title>General information</title>
+         <title>General information - Step 1</title>
          <meta content="width=device-width,initial-scale=1" name="viewport">
          <meta name="robots" content="noindex, follow">
          <!-- Meta data -->
@@ -45,9 +45,13 @@
                 title: "Canada.ca",
                 href: "https://www.canada.ca/en.html"
               },{
-                title: "Taxes",
-                href: "https://www.canada.ca/en/services/taxes.html"
+                title: "Canada Revenue Agency",
+                href: "https://www.canada.ca/en/revenue-agency.html"
               },{
+                title: "Submit Service Feedback",
+                href: "https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/complaints-disputes/make-a-service-complaint.html"
+              },
+              {
                 title: "Service feedback - RC193 online form",
                 href: "index.html"
               }
@@ -94,16 +98,16 @@
 </fieldset>
 
 <fieldset class="chkbxrdio-grp">
-<legend class="required"><span class="field-name">Are you submitting on behalf of yourself or for your business?</span>&nbsp;<a role="button" class="help-glyph" aria-controls="f49d4ed4-e236-51cd-7806-3063a80db789_inlineHelp" aria-expanded="false" href="/ebci/uisp/rc193/complaint"><span class="glyphicon glyphicon-question-sign"><span class="wb-inv"></span><!----><!----></span></a></span></legend>
+<legend class="required"><span class="field-name">How are you submitting service feedback?</span>&nbsp;<a role="button" class="help-glyph" aria-controls="f49d4ed4-e236-51cd-7806-3063a80db789_inlineHelp" aria-expanded="false" href="/ebci/uisp/rc193/complaint"><span class="glyphicon glyphicon-question-sign"><span class="wb-inv"></span><!----><!----></span></a></span></legend>
 
 <div class="radio">
-   <label for="radio1"><input id="radio1" type="radio" name="optradio" data-rule-required="true">I am submitting on behalf of myself</label>
+   <label for="radio1"><input id="radio1" type="radio" name="optradio" data-rule-required="true">As an individual</label>
 </div>
 <div class="radio">
-   <label for="radio2"><input id="radio2" type="radio" name="optradio">I am submitting on behalf of my business</label>
+   <label for="radio2"><input id="radio2" type="radio" name="optradio">As a business owner</label>
 </div>
 <div class="radio">
-   <label for="radio3"><input id="radio3" type="radio" name="optradio">I am submitting as an authorized representative on behalf of an individual or business</label>
+   <label for="radio3"><input id="radio3" type="radio" name="optradio">As an authorized representative for an individual or business</label>
 </div>
 </fieldset>
 
@@ -117,21 +121,20 @@ TEST SECTION
 <hr class="brdr-bttm">  
 <h2 class="h3 mrgn-tp-0">Individual's information</h2>
 
-<div class="row">
-<div class="col-xs-6 mrgn-tp-sm">
+
+<div class="form-group">
 <label for="fbnm" class="required"><span class="field-name">First name</span></label>
-<input class="form-control" type="text" id="fbnm" name="fbnm" size="45" maxlength="45" pattern=".{2,}" data-rule-minlength="2" required="required" data-rule-lettersonly="true">
-</div>
-<div class="col-xs-6 mrgn-tp-sm">
-<label for="lstnm" class="required"><span class="field-name">Last name</span></label>
-<input class="form-control" type="text" id="lstnm" name="lstnm" size="45" maxlength="45" pattern=".{2,}" data-rule-minlength="2" required="required" data-rule-lettersonly="true">
-</div>
+<input class="form-control" required="required" type="text" id="fbnm" name="fbnm" size="45" maxlength="45" pattern=".{2,}" data-rule-minlength="2" required="required" data-rule-lettersonly="true">
 </div>
 
+<div class="form-group">
+<label for="lstnm" class="required"><span class="field-name">Last name</span></label>
+<input class="form-control" required="required" type="text" id="lstnm" name="lstnm" size="45" maxlength="45" pattern=".{2,}" data-rule-minlength="2" required="required" data-rule-lettersonly="true">
 </div>
+
 
 <div class="form-group mrgn-tp-lg">
-<label for="fbeml" class="required"><span class="field-name">What type of identification do you want to provide? </span></label>
+<label for="fbeml" class="required"><span class="field-name">Select the identification you want to provide</span></label>
 
 <div class="radio">
    <label for="radio4"><input id="radio4" type="radio" name="optradio1">Social Insurance Number (or ITN, TTN)</label>
@@ -197,7 +200,7 @@ TEST SECTION
 
 
 <div class="form-group">
-   <label for="pcodeca1" class="required"><span class="field-name">Postal code</span></label>
+   <label for="pcodeca1" class="required"><span class="field-name">Postal code</span> (ex. A1A 1A1)</label>
    <input class="form-control" id="pcodeca1" name="pcodeca1" type="text" autocomplete="postal-code" size="7" maxlength="7" required="required" data-rule-postalCodeCA="true" />
 </div>
 
