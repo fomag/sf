@@ -86,7 +86,7 @@
 
 <ul class="form-group list-unstyled">
    <li class="checkbox">
-      <label for="fbcntc1"><input type="checkbox" name="fbcntc1" id="fbcntc1" value="yes" class="feedback-1" value="1" data-rule-required="true" onchange="valueChanged()"/> Complaint</label>
+      <label for="fbcntc1"><input type="checkbox" name="fbcntc1" id="fbcntc1" value="yes" class="feedback-1" value="1" data-rule-required="true" onchange="valueChanged()" /> Complaint</label>
    </li>
    <li class="checkbox">
       <label for="fbcntc2"><input type="checkbox" name="fbcntc2" id="fbcntc2" value="yes"> Suggestion</label>
@@ -137,19 +137,36 @@ TEST SECTION
 <label for="fbeml" class="required"><span class="field-name">Select the identification you want to provide</span></label>
 
 <div class="radio">
-   <label for="radio4"><input id="radio4" type="radio" name="optradio1">Social Insurance Number (or ITN, TTN)</label>
+   <label for="radio4"><input id="radio4" type="radio" name="optradio1" class="radio4" onchange="valueChanged2()" />Social Insurance Number (or ITN, TTN)</label>
 </div>
 <div class="radio">   
-   <label for="radio5"><input id="radio5" type="radio" name="optradio1">Other account number (ex:Trust account number, Non-resident number)</label>   
+   <label for="radio5"><input id="radio5" type="radio" name="optradio1" class="radio5" onchange="valueChanged3()" />Other account number (ex:Trust account number, Non-resident number)</label>   
 </div>
 
+<script type="text/javascript">
+    function valueChanged2()
+    {
+        if($('.radio4').is(":checked"))   
+            $(".sincls").show();
+            $(".otheracc").hide();
+    }
+</script>
 
-<div class="form-group mrgn-tp-lg">
+<script type="text/javascript">
+    function valueChanged3()
+    {
+        if($('.radio5').is(":checked"))   
+            $(".otheracc").show();
+            $(".sincls").hide();
+    }
+</script>
+
+<div class="form-group mrgn-tp-lg sincls" style="display:none">
 <label for="sin" class="required"><span class="field-name">Social Insurance Number (or ITN, TTN)</span></label>
 <input type="text" required="required" class="form-control" id="sin" name="sin" size="9" maxlength="9" data-rule-digits="true" data-rule-minlength="9">
 </div>
 
-<div class="form-group mrgn-tp-lg" style="display:none">
+<div class="form-group mrgn-tp-lg otheracc" style="display:none">
 <label for="othacc" class="required"><span class="field-name">Other account number </span></label>
 <input type="text" required="required" class="form-control" id="othacc" name="othacc" size="15" maxlength="15" data-rule-maxlength="15">
 </div>
